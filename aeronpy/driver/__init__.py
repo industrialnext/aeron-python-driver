@@ -2,7 +2,7 @@ import os
 import sys
 import subprocess
 
-__version__ = '1.15.1'
+__version__ = '1.38.0'
 
 if 'JAVA_HOME' not in os.environ:
     if sys.platform == 'darwin':
@@ -30,7 +30,7 @@ import jnius_config
 
 here, _= os.path.split(__file__)
 aeron_all_jar = os.path.join(here, f'aeron-all-{__version__}.jar')
-
+print(aeron_all_jar)
 jnius_config.set_classpath(aeron_all_jar)
 import jnius
 
