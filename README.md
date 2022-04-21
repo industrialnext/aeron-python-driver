@@ -1,9 +1,15 @@
-[![image](https://img.shields.io/pypi/v/aeron-python-driver.svg)](https://pypi.org/project/aeron-python-driver/)
-[![image](https://img.shields.io/pypi/l/aeron-python-driver.svg)](https://pypi.org/project/aeron-python-driver/)
 
 ### Introduction
 
 This repository provides unofficial Python wrapper for [Aeron Media Driver](https://github.com/real-logic/aeron) simplifying process of integration of media driver into python.
+
+*NOTE:* This fork includes an updated version of Aeron, and has the tests passing as upstream.
+
+On Arch Linux, In order to run tests, I had to:
+```
+export JVM_PATH=/usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+pytest .
+```
 
 ### Usage
 
@@ -20,7 +26,7 @@ from aeronpy.driver import media_driver
 
 with media_driver.launch(aeron_directory_name=custom_aeron_dir):
     ...
-    # interact with Aeron here       
+    # interact with Aeron here
 ```
 
 ### Troubleshooting
@@ -32,13 +38,13 @@ with media_driver.launch(aeron_directory_name=custom_aeron_dir):
     $ pip install Cython
     ```
     and retry pip installation.
-    
-    Project has been tested against Cython 0.29. 
-    
+
+    Project has been tested against Cython 0.29.
+
 * **Java not found**
-    
-    This project heavily depends on Java. Java 1.8 or newer should be installed in the system and ideally **JAVA_HOME** should point to JDK home. On OS X and Linux library will attempt to locate java even if **JAVA_HOME** is not set. If java is not present in the system, install Oracle HotSpot JDK and setup **JAVA_HOME** for your installation.     
-        
+
+    This project heavily depends on Java. Java 1.8 or newer should be installed in the system and ideally **JAVA_HOME** should point to JDK home. On OS X and Linux library will attempt to locate java even if **JAVA_HOME** is not set. If java is not present in the system, install Oracle HotSpot JDK and setup **JAVA_HOME** for your installation.
+
 
 ### License
 
