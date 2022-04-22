@@ -25,7 +25,7 @@ from setuptools import setup
 release_status = 'Development Status :: 3 - Alpha'
 dependencies = [
     'Cython',
-    'pyjnius==1.1.3',
+    'pyjnius==1.4.1',
 ]
 
 here, _ = os.path.split(__file__)
